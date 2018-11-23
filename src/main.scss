@@ -37,7 +37,7 @@ body {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      filter: brightness(85%);
+      filter: brightness(60%);
     }
 
     .text {
@@ -50,6 +50,30 @@ body {
       text-align: center;
       margin: auto;
       width: 80%;
+      animation-name: fadeIn;
+      animation-duration: 1.75s;
+      font-size: 14px;
+    }
+
+    .no-text {
+      display: none;
+    }
+
+    .darken-img {
+      background-color: #808080;
+      filter: brightness(85%);
+      animation-name: darken;
+      animation-duration: 1s;
+    }
+
+    @keyframes darken {
+      from { filter: brightness(60%) }
+      to { filter: brightness(85%) }
+    }
+
+    @keyframes fade-in {
+      from { opacity: 0; }
+      to { opacity: 100; }
     }
   }
 }
