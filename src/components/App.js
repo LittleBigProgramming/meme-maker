@@ -4,22 +4,51 @@ import '../main.scss';
 
 import { Form, FormGroup, FormControl } from 'react-bootstrap';
 import MemeItem from './MemeItem';
+import ControlLabel from "react-bootstrap/es/ControlLabel";
 
 class App extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            memeLimit: 10
+            memeLimit: 10,
+            topText: '',
+            bottomText: ''
         }
     }
+
     render() {
         return (
             <div className="app">
                 <h2><u>Generate your memes here</u></h2>
+                <Form inline>
+                    <FormGroup>
+                        <ControlLabel>Top</ControlLabel>
+                        {' '}
+                        <FormControl
+                            type="text"
+                            onChange={ event => this.setState({ topText: event.target.value  })}
+                        />
+                        {' '}
+                    </FormGroup>
+                    <FormGroup>
+                        {' '}
+                        <ControlLabel>&nbsp;Bottom</ControlLabel>
+                        {' '}
+                        <FormControl
+                            type="text"
+                            onChange={ event => this.setState({ bottomText: event.target.value  })}
+                        />
+                    </FormGroup>
+                </Form>
                 { this.props.memes.slice(0, this.state.memeLimit).map((meme, index) => {
                         return (
-                            <MemeItem key={index} meme={meme} />
+                            <MemeItem
+                                key={index}
+                                meme={meme}
+                                topText={this.state.topText}
+                                bottomText={this.state.bottomText}
+                            />
                         )
                     })
                 }
