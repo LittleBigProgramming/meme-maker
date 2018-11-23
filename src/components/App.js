@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import '../main.scss';
 
+import { Form, FormGroup, FormControl } from 'react-bootstrap';
 import MemeItem from './MemeItem';
 
 class App extends Component {
@@ -15,7 +16,7 @@ class App extends Component {
     render() {
         return (
             <div className="app">
-                <h2>Generate your memes here</h2>
+                <h2><u>Generate your memes here</u></h2>
                 { this.props.memes.slice(0, this.state.memeLimit).map((meme, index) => {
                         return (
                             <MemeItem key={index} meme={meme} />
