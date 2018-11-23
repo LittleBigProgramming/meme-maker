@@ -1,0 +1,19 @@
+body {
+  font-family: Arial, serif;
+}
+
+.app {
+  display: block;
+  margin: auto;
+  text-align: center;
+  width: 80%;
+
+  .button {
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: auto;
+    padding: 15px;
+    width: 25%;
+  }
+}

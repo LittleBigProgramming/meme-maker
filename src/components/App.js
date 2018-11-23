@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import '../main.scss';
 
 class App extends Component {
     constructor(props) {
@@ -11,7 +12,7 @@ class App extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="app">
                 <h2>Generate your memes here</h2>
                 { this.props.memes.slice(0, this.state.memeLimit).map((meme, index) => {
                         return (
