@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import '../main.scss';
 
-import { Form, FormGroup, FormControl } from 'react-bootstrap';
+import { Form, FormGroup, FormControl, ControlLabel} from 'react-bootstrap';
 import MemeItem from './MemeItem';
-import ControlLabel from "react-bootstrap/es/ControlLabel";
 
 class App extends Component {
     constructor(props) {
