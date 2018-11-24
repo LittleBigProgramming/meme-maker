@@ -4,6 +4,7 @@ import '../main.scss';
 
 import { Form, FormGroup, FormControl, ControlLabel} from 'react-bootstrap';
 import MemeItem from './MemeItem';
+import MyMemes from './MyMemes';
 
 class App extends Component {
     constructor(props) {
@@ -19,10 +20,11 @@ class App extends Component {
     render() {
         return (
             <div className="app">
-                <h2><u>Generate your memes here</u></h2>
+                <h2>Generate your memes here</h2>
+                <MyMemes/>
                 <Form inline>
                     <FormGroup>
-                        <ControlLabel>Top</ControlLabel>
+                        <ControlLabel>Caption Top</ControlLabel>
                         {' '}
                         <FormControl
                             type="text"
@@ -32,7 +34,7 @@ class App extends Component {
                     </FormGroup>
                     <FormGroup>
                         {' '}
-                        <ControlLabel>&nbsp;Bottom</ControlLabel>
+                        <ControlLabel>&nbsp;&nbsp;Caption Bottom</ControlLabel>
                         {' '}
                         <FormControl
                             type="text"
