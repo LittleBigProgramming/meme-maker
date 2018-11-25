@@ -9,3 +9,5 @@ REACT_APP_PASSWORD=Password
 Install the node modules run `yarn` or `yarn install` from your terminal to install all of the dependencies. 
 
 To run the app run `yarn start`.
+
+Feel free to use the demo application [here.](https://make-your-meme.herokuapp.com/)
